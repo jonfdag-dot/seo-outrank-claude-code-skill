@@ -1,20 +1,24 @@
-# AI-Era SEO & Marketing Skill for Claude Code
+<p align="center">
+  <img src="./banner.svg" alt="AI-Era SEO and Marketing Skill for Claude Code" width="100%">
+</p>
+
+<p align="center">
+  <sub>A Claude Code skill &middot; authored by <b>[your name]</b> &middot; MIT License</sub>
+</p>
 
 Point this skill at any web page (or a keyword) and it runs a **live competitive SEO assessment**: it searches Google in real time, scrapes the top-ranking competitors, finds the content gaps they leave open, and hands you a concrete plan — page title, URL slug, headline, and opening line — to outrank them. **No API key required** — it uses Claude Code's built-in web tools.
 
-## Install — 3 steps
+---
 
-### 1. Download
+## Install in 3 steps
+
+### Step 1 · Download
 Download this folder as a ZIP and unzip it. You should have a folder named `ai-era-seo-marketing` containing `SKILL.md` and a `scripts/` folder.
 
-### 2. Drag it into your Claude skills folder
-Move the whole `ai-era-seo-marketing` folder into your Claude skills directory:
-- **This project only:** `.claude/skills/`
-- **All your projects:** `~/.claude/skills/`
+### Step 2 · Drag it into your Claude skills folder
+Move the whole `ai-era-seo-marketing` folder into `.claude/skills/` (this project only) or `~/.claude/skills/` (all your projects). Put it *directly* inside that folder — not in a sub-folder — or Claude won't recognize it by name.
 
-> Put it *directly* inside `.claude/skills/` — not in a sub-folder — or Claude won't recognize it by name.
-
-### 3. Ask Claude Code to wire it in
+### Step 3 · Ask Claude Code to wire it in
 Open Claude Code in your project and paste this prompt:
 
 ```
@@ -27,8 +31,11 @@ I just added a skill folder called "ai-era-seo-marketing" to my Claude skills di
 Then confirm it's working by running its Live SEO Assessment Loop on one of my real pages and showing me the assessment.
 ```
 
-That's it. From now on, just tell Claude **"run the SEO skill on /my-page"** and it searches live, studies your competitors, and tells you exactly what to change to win the top spot.
+> **No setup, no API key.** This skill uses Claude Code's built-in web search and fetch — nothing to enable or configure. The first time it runs, Claude may ask permission to use **WebSearch** / **WebFetch** — just approve it.
 
+---
+
+That's it. From now on, just tell Claude **"run the SEO skill on /my-page"** and it searches live, studies your competitors, and tells you exactly what to change to win the top spot.
 
 
 
