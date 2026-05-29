@@ -42,3 +42,20 @@ Then confirm it's working by running its Live SEO Assessment Loop on one of my r
 ---
 
 That's it. From now on, just tell Claude **"run the SEO skill on /my-page"** and it searches live, studies your competitors, and tells you exactly what to change to win the top spot.
+
+# Sources
+
+This skill is grounded in official Google Search Central documentation
+(verified 2026-05-28).
+
+| Source | URL |
+|---|---|
+| Optimizing for generative AI search | https://developers.google.com/search/docs/fundamentals/ai-optimization-guide |
+| SEO Starter Guide | https://developers.google.com/search/docs/fundamentals/seo-starter-guide |
+| Guide to Google Search ranking systems | https://developers.google.com/search/docs/appearance/ranking-systems-guide |
+| Structured data (all features) | https://developers.google.com/search/docs/appearance/structured-data/search-gallery |
+| FAQ structured data (deprecation notice) | https://developers.google.com/search/docs/appearance/structured-data/faqpage |
+| Spam policies | https://developers.google.com/search/docs/essentials/spam-policies |
+
+**Note:** Any cited statistics (e.g. "58% click reduction," Ahrefs studies) are
+third-party estimates, not Google guidance.
