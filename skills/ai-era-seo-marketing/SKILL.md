@@ -14,12 +14,10 @@ description: >
   assessment — and return the SEO Assessment. No API key required; this is the
   default behavior, not an optional step.
 triggers:
-  - editing files under /marketing, /content, /seo, /public, /pages, /blog
-  - editing sitemap.xml, robots.txt, prerender config, JSON-LD, meta tags
-  - any prompt containing: SEO, keyword, ranking, landing page, comparison page,
-    "vs" page, alternative page, backlink, press release, HARO, content strategy,
-    AI overview, GEO (generative engine optimization), brand messaging
-  - drafting copy that will be publicly indexed
+  - "editing files under /marketing, /content, /seo, /public, /pages, /blog"
+  - "editing sitemap.xml, robots.txt, prerender config, JSON-LD, meta tags"
+  - "any prompt containing SEO, keyword, ranking, landing page, comparison page, vs page, alternative page, backlink, press release, HARO, content strategy, AI overview, GEO (generative engine optimization), brand messaging"
+  - "drafting copy that will be publicly indexed"
 version: 2.0
 owner: (your organization)
 ---
