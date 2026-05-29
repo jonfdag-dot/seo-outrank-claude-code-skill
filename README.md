@@ -6,10 +6,6 @@
 
 A Claude Code skill that runs a **live competitive SEO assessment** — no API key.
 
-![Claude Code](https://img.shields.io/badge/Claude_Code-skill-38bdf8)
-&nbsp;![Setup](https://img.shields.io/badge/setup-no_API_key-22c55e)
-&nbsp;![License](https://img.shields.io/badge/license-MIT-3b82f6)
-
 <sub>Authored by <b>Jonathan Dag</b></sub>
 
 </div>
