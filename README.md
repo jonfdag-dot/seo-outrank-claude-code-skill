@@ -4,7 +4,7 @@
 
 ### Outrank the page above you.
 
-A Claude Code skill that runs a **live competitive SEO assessment** — no API key.
+A Claude Code skill that runs a **live competitive SEO assessment**.
 
 <sub>Authored by <b>Jonathan Dag</b></sub>
 
