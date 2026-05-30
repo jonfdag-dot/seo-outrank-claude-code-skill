@@ -281,10 +281,29 @@ For every page, the **primary subject** — the job the searcher is trying to do
 |------|---------|
 | `<title>` | `Export [Your Input] to [Named Tool] — [Your Product]` |
 | URL slug | `/[your-input]-to-[named-tool]` |
-| `<h1>` | `Turn [your input] into a portable [named-tool] artifact` |
+| `<h1>` | `Run [your input] once in [Tool A], [Tool B], and [Tool C]` |
 | Opening line | `[Your Product] converts [your input] into a portable artifact you can run in [Tool A], [Tool B], or [Tool C].` |
 
 The four placements may phrase the subject differently (the title, h1, and opening line above all vary the wording) — that is *correct*, not a defect. The test is: a reader landing on any one of the four instantly knows what the page is for. If the page's subject is ambiguous in any slot, it's not optimized. If you're counting keyword occurrences to "win," stop — that's the retired v1.0 trap (Section 6 F2, A2).
+
+### 7.1 Title ↔ H1 do different jobs — the divergence ceiling
+
+The Four-Slot Rule above is a **floor** (subject present in all four slots). It is **not** a license to paraphrase one sentence four times. The two highest-value slots each do a **different job**:
+
+- `<title>` wins the **SERP / AI-citation click** — ≤60c, front-loaded keyword, literal query-match, brand suffix. Optimizes click-through.
+- `<h1>` confirms **on-page relevance + plants your differentiator** — carries the same keyword (floor), but the *rest* of the string pivots to a benefit, hook, or differentiator the title couldn't fit. Optimizes "am I in the right place" + dwell.
+
+**Test (run on every page):** title and h1 may share the **primary keyword only**. If the **non-keyword remainder also mirrors**, the h1 is wasted — pivot it. They may share extra tokens **iff** doing different rhetorical work — *abstract claim vs concrete instantiation · category vs specific · generic vs branded* (e.g. title `No setup` + h1 `no [platform] config to maintain` is legitimate, not a mirror).
+
+Construction formula:
+- `<title>`: `[keyword] + [literal-match qualifier] + [brand suffix]`
+- `<h1>`: `[keyword] + [product-specific angle / benefit / pain] + voice`
+
+Worked example (the mirror to avoid → the fix):
+- ✗ title `[Product] Analytics You Own — Verified, Fast, Portable` · h1 `Your own [Product] analytics — verified, fast, and yours to keep` — near-identical, h1 wasted.
+- ✓ title kept · h1 `[Product] analytics that reuse your saved work instead of rebuilding it` — keyword kept; h1 now carries a differentiator the title has no room for.
+
+This is the within-page sibling of Hard Rule 11 (cannibalization): Rule 11 stops two *pages* from duplicating keyword equity; §7.1 stops a page's two *strings* from duplicating it. Any "X must appear in A and B" rule needs a paired "and A and B must do non-overlapping work," or it silently licenses duplication.
 
 ---
 
@@ -317,6 +336,7 @@ Ranked by ROI in the AI era:
 10. Keep your product's unique, hard-to-copy differentiators present in competitive content — the things competitors structurally can't claim (fill these in for your product).
 11. **One page, one query — no cannibalization.** Before shipping a cluster, validate no two pages target the same keyword/intent. When two overlap, differentiate by *intent* (e.g. "setup" vs "watch a demo") or *scope* (branded head vs per-platform), or merge. A page that competes with your own page splits equity and confuses the crawler. (On a multi-page sweep this is the synthesizer's job — the per-page agents can't see each other.)
 12. **Every comparison/alternative page ships per-competitor `is X better?` + `[competitor] alternative` claims (B3.1)** — each cited to an auditable source, each with an honest concession. A bare comparison table is not enough.
+13. **Title ↔ H1 do different jobs — no mirroring (§7.1).** `<title>` and `<h1>` share the primary keyword ONLY; the non-keyword remainder must do non-overlapping rhetorical work (title = win the SERP click; h1 = confirm relevance + plant your differentiator). A title/h1 that paraphrase each other waste one of the page's two highest-value strings → block and pivot the h1. Shared extra tokens allowed iff different rhetorical work (abstract vs concrete · category vs specific · generic vs branded).
 
 ---
 
@@ -325,6 +345,7 @@ Ranked by ROI in the AI era:
 ```
 [ ] Ran the Live SEO Assessment Loop (Addendum A) first — live WebSearch SERP + WebFetch top-3 scrape — and targeting a single high-intent keyword/job (A1)?
 [ ] Primary subject unmistakable in title, slug, h1, opening line — human language, synonyms fine, NOT exact-match-engineered (Four-Slot Rule)?
+[ ] Title ↔ H1 do DIFFERENT jobs — share the primary keyword ONLY; non-keyword remainder does non-overlapping rhetorical work; h1 carries a benefit/differentiator the title couldn't (§7.1 / Hard Rule 13). Mirrored remainder = block + pivot.
 [ ] Page type matches the dominant intent of the ranking pages: conversion / comparison / alternative / reviews?
 [ ] Covers the table-stakes subtopics the leaders all cover, AND lands at least one whitespace differentiator no leader covers?
 [ ] CTA visible before scroll?
@@ -522,6 +543,7 @@ Plot to win:                                         [Phase 5]
     slug   → <…>
     h1     → <…>
     opening line → <…>
+    title↔h1 divergence: shared = keyword only? · h1 carries a non-title angle? · PASS / PIVOT   [§7.1]
   schema (§13): <…>
 
 Hard-Rules check (§9): <one line per rule, pass/fail>
