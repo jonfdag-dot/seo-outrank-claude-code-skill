@@ -12,7 +12,7 @@ A Claude Code skill that runs a **live competitive SEO assessment** — no API k
 
 ---
 
-Point this skill at any web page (or a keyword) and it runs a **live competitive SEO assessment**: it searches Google in real time, scrapes the top-ranking competitors, finds the content gaps they leave open, and hands you a concrete plan — page title, URL slug, headline, and opening line — to outrank them. **No API key required** — it uses Claude Code's built-in web tools.
+Point this skill at any web page (or a keyword) and it runs a **live competitive SEO assessment**: it searches Google in real time, scrapes the top-ranking competitors, finds the content gaps they leave open, and hands you a concrete plan — page title, URL slug, headline, and opening line — to outrank them.
 
 ---
 
