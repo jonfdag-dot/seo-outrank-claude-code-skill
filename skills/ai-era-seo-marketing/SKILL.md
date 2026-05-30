@@ -18,7 +18,7 @@ triggers:
   - "editing sitemap.xml, robots.txt, prerender config, JSON-LD, meta tags"
   - "any prompt containing SEO, keyword, ranking, landing page, comparison page, vs page, alternative page, backlink, press release, HARO, content strategy, AI overview, GEO (generative engine optimization), brand messaging"
   - "drafting copy that will be publicly indexed"
-version: 2.0
+version: 2.1
 owner: (your organization)
 ---
 
@@ -146,6 +146,28 @@ In the AI era, **conversion-oriented landing pages and structured comparison pag
 - Embed a comparison table (reuse B2 structure).
 - **Bonus mechanic:** if a competitor under-invests in SEO, your alternative page can rank for *their own brand name* and get cited when people research them.
 
+### B3.1. Per-competitor "is X better than Y?" + "alternative to" claims (the comparison-page conversion layer)
+A comparison table is table-stakes; the conversion + AI-citation win is **explicit, articulate, factual head-to-head claims, one per named competitor.** Add both forms:
+
+1. **Literal-question claim (FAQ entry):** `Is [You] better than [Competitor]? Yes — [the single sharpest differentiator], because [2–3 cited reasons].` Wins the exact `is [you] better than [competitor]` query AND is the format AI overviews lift verbatim. Phrase the question exactly as a user/LLM types it.
+2. **"[Competitor] alternative" one-liner (hook/header + meta):** `The [Competitor] alternative that [differentiated verb] — [your wedge].` Targets the high-intent `[competitor] alternative` query (B3).
+
+**Three non-negotiables for every claim:**
+- **Cite an auditable source.** Every "better because" maps to a documented row in a versioned comparison data file you maintain — each cell checked against the competitor's public product page and correctable by anyone (e.g. via a pull request). Claims without a backing source are puffery: Google and LLMs discount them and you can't defend them.
+- **Keep an honest "where [Competitor] still wins" concession.** The concession is what makes "yes, better" credible — and credibility earns the citation (Law 4/10). A comparison with no concession reads as marketing and gets ignored.
+- **Lead with the searcher's outcome, not the feature.** State the result the buyer gets, not the mechanism that produces it.
+
+**Copy-paste pattern (one block per competitor):**
+```
+Is [You] better than [Competitor]? Yes — for [the job the buyer is doing].
+  • [cited differentiator 1 — maps to a row in your comparison data]
+  • [cited differentiator 2]
+  • [cited differentiator 3]
+  Where [Competitor] still wins: [honest concession].
+  → "The [Competitor] alternative that [verb] — [wedge]."
+```
+Plus one **umbrella line** for the hero/meta: `The [wedge] alternative to [A], [B], and [C] — [one-sentence why].`
+
 ### B4. Reviews page — `[Your Product] reviews`
 - A dedicated page consolidating every review/testimonial you want surfaced.
 - During due diligence, LLMs search `[brand] reviews` → Google → this page → they paraphrase what they find.
@@ -156,6 +178,14 @@ Build the full matrix against **your top 2–4 competitors**, and any product po
 - **A capability only you offer** (something a competitor's architecture can't match)
 - **A proprietary dataset or first-hand source** competitors don't have
 - **An integration or portability competitors lack** (e.g. runs outside the platform, not locked to one vendor)
+
+### B6. Page-type framings that beat the generic defaults
+Concrete framings worth reaching for before improvising — each abstracted from production work:
+
+- **FAQ page = the GEO/AI-citation documentation hub, NOT a duplicate of your trust/security page.** If a trust/security page exists, the FAQ must NOT re-target its angle — two pages answering the same "is it safe…" question cannibalize each other. Frame the FAQ as the one page an AI agent cites to answer ANY product question — *how it works · what it costs · billing · setup & supported platforms · export/portability · a short security answer that links to the trust page.* Cluster Q&A under those named headers, phrase each question as the literal user/LLM query, open with an answer-first summary paragraph for AI-overview extraction, and emit `FAQPage` JSON-LD only where real Q&A is visible on the page. A D1/D5 citation play, not a keyword race.
+- **Platform / per-integration pages: keep the real "[task] for [platform]" head keyword, but package your critical features in the first viewport.** Under the H1 add a one-line feature strip — `✓ [core feature] · ✓ [the job] for [Platform] · ✓ [portability / ownership beat]` — so your most important keywords sit above the fold without stuffing the title. Scope each page to its own platform/brand (zero intra-cluster cannibalization), name the alternative the searcher would otherwise build or buy, and beat it.
+- **Feature pages: anchor on your defensible, owned asset — not a generic category term.** When a feature's obvious keyword is a broad category term incumbents own (and a sibling page already targets), reframe around the proprietary version of that capability that only you can credibly claim, and tie it to the sibling page in the same value chain. A generic category frame cannibalizes siblings and pits you head-on against incumbents you'll lose to.
+- **Slug strategy: job-named over brand-named — except when deliberately establishing a named entity.** Default to the searcher's job as the slug (`/[the-job-the-searcher-types]`, not `/features/x-v2`). KEEP a branded-entity slug only when the page's job is to make that entity a citable thing (a named format, a product surface) — there the entity IS the search term. Renaming a live, indexed slug carries redirect + internal-link-sweep + canonical cost; recommend it only when the new slug materially better matches real intent. The other three Four-Slot slots carry the job even when the slug carries the entity.
 
 ---
 
@@ -285,6 +315,8 @@ Ranked by ROI in the AI era:
 8. **Prefer** concrete, sourced numbers over adjectives (D3).
 9. When a request conflicts with these rules, **state the conflict and offer the compliant alternative** before proceeding.
 10. Keep your product's unique, hard-to-copy differentiators present in competitive content — the things competitors structurally can't claim (fill these in for your product).
+11. **One page, one query — no cannibalization.** Before shipping a cluster, validate no two pages target the same keyword/intent. When two overlap, differentiate by *intent* (e.g. "setup" vs "watch a demo") or *scope* (branded head vs per-platform), or merge. A page that competes with your own page splits equity and confuses the crawler. (On a multi-page sweep this is the synthesizer's job — the per-page agents can't see each other.)
+12. **Every comparison/alternative page ships per-competitor `is X better?` + `[competitor] alternative` claims (B3.1)** — each cited to an auditable source, each with an honest concession. A bare comparison table is not enough.
 
 ---
 
@@ -301,6 +333,8 @@ Ranked by ROI in the AI era:
 [ ] Internal link from main site (for authority pages)?
 [ ] Your differentiators referenced where relevant?
 [ ] Per-route structured data emitted via your head/metadata mechanism, and every emitted type's required visible content is actually on the page (Section 13)?
+[ ] No keyword/intent cannibalization — this page owns a query no sibling page targets (Hard Rule 11)?
+[ ] (Comparison/alternative pages) Per-competitor "is X better?" + "[competitor] alternative" claims present, each cited + with an honest concession (B3.1)?
 [ ] NOT an informational blog post masquerading as a traffic play?
 ```
 
@@ -505,3 +539,39 @@ python3 scripts/serp_intel.py --file keywords.txt --top 3 --out report.md
 Without the key the script **exits non-zero** — it will not emit an empty report. The script's page-fetch is also robots-aware and rate-limited.
 
 **Stated non-goal (both tiers):** do **not** score exact-keyword-match density to out-stuff competitors. Measure semantic/intent coverage and content gaps. If any coverage number pushes you toward rewriting for the metric, ignore it — that's the retired v1.0 trap (Section 6 F2, A2). You beat competitors by **covering the intent + owning the whitespace wedge**, not by repeating their keywords.
+
+---
+
+## Addendum B — Running this skill at SCALE (multi-agent page sweeps)
+
+When the request is "run the SEO skill on EVERY page" (one subagent per page, fanned out), do **not** run it the naive way. This addendum is the postmortem + the fixed, scalable procedure.
+
+### What goes wrong the naive way
+A large parallel fan-out where **each subagent is told to read this full skill file**, then read its page, run the live loop, and fill a many-field structured schema, tends to **fail most agents** — they finish WITHOUT producing structured output (a couple of tool-calls each; they never do the real research). Root cause: **making every subagent read the full skill burns its budget/attention before it can do the work or call the output tool.** Reading the canonical file does not scale across a fan-out.
+
+### The fix
+1. **Embed, don't read.** Do NOT point fan-out subagents at this file. **Paste the condensed operating procedure (below) directly into each subagent's prompt.** The orchestrator already has the method; the subagents get it inline and spend their whole budget on page + live SERP + output. This still *uses the skill* — it applies the playbook — it just removes N redundant full-file reads. *(So a "scan all pages" request must include the skill as embedded prompt text per subagent, never a file path to read.)*
+2. **Slim the output schema.** Many required fields depress structured-output compliance. Require only: `route · target_keyword · serp_top · wedge · whats_lacking · slug_change · recommended_slug · new_title · new_h1 · new_opening_line · key_points · priority`.
+3. **Make structured output the explicit terminal step.** End every subagent prompt with: *"Your FINAL and ONLY deliverable is the structured-output tool call. An answer that isn't a structured-output call is discarded."*
+4. **Cap the live work.** ~1 page read + 1 WebSearch + **2** WebFetch per subagent (not 3+) — bounded, still real research.
+5. **Synthesis is a separate final agent** that receives all per-page output and writes one master plan, INCLUDING an explicit **keyword-uniqueness / anti-cannibalization pass** (Hard Rule 11) and a **per-competitor-claims check** on comparison pages (B3.1). The per-page agents can't see each other — only the synthesizer catches two pages targeting the same query.
+
+### The embeddable condensed method — paste verbatim into each fan-out subagent prompt
+```
+SEO METHOD (condensed — apply exactly; do NOT read any skill file):
+- WEDGE = your product's unique, hard-to-copy differentiators (the things competitors structurally can't claim — fill these in).
+- HUNT high-intent, winnable keywords ("generator", "[task] for [profession/platform]", "[competitor] alternative", "how to <task>"). AVOID broad head terms incumbents own and what/how/why-as-traffic-play.
+- FOUR-SLOT: the page's job, in the searcher's words, unmistakable in title + slug + h1 + opening line. Synonyms fine; NEVER exact-match-stuff.
+- WIN page types: conversion landing, comparison/"vs"/alternative (table + per-competitor "is X better?" claims, each with an honest concession), reviews. CTA above the fold. Concrete numbers > adjectives.
+- Legal/utility pages: no keyword play — say so, mark Low, don't invent.
+- LIVE LOOP: read the page → pick 1 target keyword → WebSearch the real SERP → WebFetch top 2 competitors (intent, subtopics, do they cover your wedge, CTA) → derive table-stakes + the whitespace wedge → rewrite the hook to match real intent.
+- FINAL + ONLY deliverable = the structured-output tool call. Prose is discarded.
+```
+
+### Tier selection (updated — supersedes the two-tier table for multi-page work)
+| Scale | How |
+|---|---|
+| 1 page, interactive | Run Addendum A inline yourself. |
+| 2–10 pages | Inline, or a small fan-out with the embedded method above. |
+| 10–50+ pages | **Multi-agent fan-out: embed the method (never read this file), slim schema, terminal structured-output, 2 fetches/agent, separate synthesis agent with an anti-cannibalization + per-competitor-claims pass.** |
+| Headless / CI | Tier-2 `serp_intel.py` (SerpAPI). |
